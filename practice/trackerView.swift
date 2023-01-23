@@ -1,0 +1,75 @@
+//
+//  trackerView.swift
+//  practice
+//
+//  Created by Jonathan Vale on 1/21/23.
+//
+// To do:
+// expand button frame so it covers all of the screen
+// add function to button
+
+import Foundation
+import SwiftUI
+
+struct trackerView: View {
+    @State private var lifeTotal = 20
+    let columns = [GridItem(.flexible()), GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible())]
+    var body: some View {
+        NavigationStack {
+            VStack(spacing: 0) {
+                VStack(spacing:0) {
+                    Button("+") {
+                        print()
+                    }
+                    
+                    Text("\(lifeTotal)")
+                           
+                    Button("-") {
+                        print()
+                    }
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(.purple)
+                .rotationEffect(Angle(degrees: 180))
+                .ignoresSafeArea()
+                .font(.system(size: 75))
+                
+                LazyVGrid(columns: columns) {
+                    ForEach(1...4, id: \.self) { value in
+                        Text("icon")
+                    }
+                }
+                .background(.yellow)
+                
+                VStack(spacing: 0) {
+                    Spacer()
+                    Button("+") {
+                        print()
+                    }
+                   
+                    Spacer()
+                 Text("\(lifeTotal)")
+                    Spacer()
+                    
+                    
+                    Button("-") {
+                        print()
+                    }
+                    Spacer()
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(.cyan)
+                .ignoresSafeArea()
+                .font(.system(size: 75))
+                
+            }
+        }
+        .foregroundColor(.primary)
+    }
+}
+
+struct trackerView_Previews: PreviewProvider {
+    static var previews: some View {
+        trackerView()
+    }
+}
