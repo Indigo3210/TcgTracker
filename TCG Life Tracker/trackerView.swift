@@ -13,8 +13,8 @@ import SwiftUI
 struct trackerView: View {
     @State private var lifeTotalPlayer1 = 20
     @State private var lifeTotalPlayer2 = 20
-
-    let columns = [GridItem(.flexible()), GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible())]
+    var midSectionOptions = ["Settings", "Reset", "Colors"]
+    let columns = [GridItem(.flexible()), GridItem(.flexible()),GridItem(.flexible())]
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
@@ -37,9 +37,13 @@ struct trackerView: View {
                 .font(.system(size: 75))
                 
                 LazyVGrid(columns: columns) {
-                    ForEach(1...4, id: \.self) { value in
-                        Text("icon")
+                    ForEach(0..<3) {number in
+                        Button(midSectionOptions[number]) {
+                        }
+                        .font(.system(size: 20))
                     }
+                        
+                        
                 }
                 .background(.yellow)
                 

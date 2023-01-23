@@ -14,7 +14,7 @@ struct menuView: View {
         NavigationStack {
             
             VStack {
-                Text("TCG Life Tracker")
+                Text("  Life Tracker")
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 24)
                     .font(.system(size: 50))
