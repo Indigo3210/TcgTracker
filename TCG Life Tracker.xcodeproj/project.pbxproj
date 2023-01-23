@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC136D14296D16EA00C7342C /* practiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC136D13296D16EA00C7342C /* practiceApp.swift */; };
+		FC136D14296D16EA00C7342C /* TCGLifeTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC136D13296D16EA00C7342C /* TCGLifeTrackerApp.swift */; };
 		FC136D16296D16EA00C7342C /* menuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC136D15296D16EA00C7342C /* menuView.swift */; };
 		FC136D18296D16EC00C7342C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC136D17296D16EC00C7342C /* Assets.xcassets */; };
 		FC136D1B296D16EC00C7342C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC136D1A296D16EC00C7342C /* Preview Assets.xcassets */; };
@@ -15,8 +15,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FC136D10296D16EA00C7342C /* practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC136D13296D16EA00C7342C /* practiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = practiceApp.swift; sourceTree = "<group>"; };
+		FC136D10296D16EA00C7342C /* TCG Life Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCG Life Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC136D13296D16EA00C7342C /* TCGLifeTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCGLifeTrackerApp.swift; sourceTree = "<group>"; };
 		FC136D15296D16EA00C7342C /* menuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuView.swift; sourceTree = "<group>"; };
 		FC136D17296D16EC00C7342C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC136D1A296D16EC00C7342C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -37,7 +37,7 @@
 		FC136D07296D16EA00C7342C = {
 			isa = PBXGroup;
 			children = (
-				FC136D12296D16EA00C7342C /* practice */,
+				FC136D12296D16EA00C7342C /* TCG Life Tracker */,
 				FC136D11296D16EA00C7342C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,21 +45,21 @@
 		FC136D11296D16EA00C7342C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FC136D10296D16EA00C7342C /* practice.app */,
+				FC136D10296D16EA00C7342C /* TCG Life Tracker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FC136D12296D16EA00C7342C /* practice */ = {
+		FC136D12296D16EA00C7342C /* TCG Life Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				FC136D13296D16EA00C7342C /* practiceApp.swift */,
+				FC136D13296D16EA00C7342C /* TCGLifeTrackerApp.swift */,
 				FC136D15296D16EA00C7342C /* menuView.swift */,
 				FC61E326297CE9E800E85B0C /* trackerView.swift */,
 				FC136D17296D16EC00C7342C /* Assets.xcassets */,
 				FC136D19296D16EC00C7342C /* Preview Content */,
 			);
-			path = practice;
+			path = "TCG Life Tracker";
 			sourceTree = "<group>";
 		};
 		FC136D19296D16EC00C7342C /* Preview Content */ = {
@@ -73,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FC136D0F296D16EA00C7342C /* practice */ = {
+		FC136D0F296D16EA00C7342C /* TCG Life Tracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FC136D1E296D16EC00C7342C /* Build configuration list for PBXNativeTarget "practice" */;
+			buildConfigurationList = FC136D1E296D16EC00C7342C /* Build configuration list for PBXNativeTarget "TCG Life Tracker" */;
 			buildPhases = (
 				FC136D0C296D16EA00C7342C /* Sources */,
 				FC136D0D296D16EA00C7342C /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = practice;
+			name = "TCG Life Tracker";
 			productName = practice;
-			productReference = FC136D10296D16EA00C7342C /* practice.app */;
+			productReference = FC136D10296D16EA00C7342C /* TCG Life Tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FC136D0B296D16EA00C7342C /* Build configuration list for PBXProject "practice" */;
+			buildConfigurationList = FC136D0B296D16EA00C7342C /* Build configuration list for PBXProject "TCG Life Tracker" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FC136D0F296D16EA00C7342C /* practice */,
+				FC136D0F296D16EA00C7342C /* TCG Life Tracker */,
 			);
 		};
 /* End PBXProject section */
@@ -142,7 +142,7 @@
 			files = (
 				FC61E327297CE9E800E85B0C /* trackerView.swift in Sources */,
 				FC136D16296D16EA00C7342C /* menuView.swift in Sources */,
-				FC136D14296D16EA00C7342C /* practiceApp.swift in Sources */,
+				FC136D14296D16EA00C7342C /* TCGLifeTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +270,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"practice/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TCG Life Tracker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -298,7 +298,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"practice/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TCG Life Tracker/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -322,7 +322,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FC136D0B296D16EA00C7342C /* Build configuration list for PBXProject "practice" */ = {
+		FC136D0B296D16EA00C7342C /* Build configuration list for PBXProject "TCG Life Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC136D1C296D16EC00C7342C /* Debug */,
@@ -331,7 +331,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FC136D1E296D16EC00C7342C /* Build configuration list for PBXNativeTarget "practice" */ = {
+		FC136D1E296D16EC00C7342C /* Build configuration list for PBXNativeTarget "TCG Life Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FC136D1F296D16EC00C7342C /* Debug */,
