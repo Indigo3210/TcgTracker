@@ -5,27 +5,29 @@
 //  Created by Jonathan Vale on 1/21/23.
 //
 // To do:
-// expand button frame so it covers all of the screen
 // add function to button
 
 import Foundation
 import SwiftUI
 
 struct trackerView: View {
-    @State private var lifeTotal = 20
+    @State private var lifeTotalPlayer1 = 20
+    @State private var lifeTotalPlayer2 = 20
+
     let columns = [GridItem(.flexible()), GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible())]
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
                 VStack(spacing:0) {
                     Button("+") {
-                        print()
+                        lifeTotalPlayer1 += 1
                     }
                     
-                    Text("\(lifeTotal)")
+                    Text("\(lifeTotalPlayer1)")
                            
                     Button("-") {
-                        print()
+                        lifeTotalPlayer1 -= 1
+
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -44,16 +46,16 @@ struct trackerView: View {
                 VStack(spacing: 0) {
                     Spacer()
                     Button("+") {
-                        print()
+                        lifeTotalPlayer2 += 1
                     }
                    
                     Spacer()
-                 Text("\(lifeTotal)")
+                 Text("\(lifeTotalPlayer2)")
                     Spacer()
                     
                     
                     Button("-") {
-                        print()
+                        lifeTotalPlayer2 -= 1
                     }
                     Spacer()
                 }

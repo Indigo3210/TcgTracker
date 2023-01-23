@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct menuView: View {
-    var options = ["TCG Selector", "Profile", "Settings"]
+    var options = ["TCG Selector", "Settings"]
     
     var body: some View {
         NavigationStack {
@@ -36,7 +36,7 @@ struct menuView: View {
                 }
                 }
                 .foregroundColor(.black)
-                ForEach(0..<3) {number in
+                ForEach(0..<2) {number in
                     Button(options[number]) {
                     }
                     .frame(maxWidth: 250, maxHeight: 60)
