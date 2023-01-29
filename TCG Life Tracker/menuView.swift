@@ -24,7 +24,7 @@ struct menuView: View {
                     .foregroundColor(.yellow)
                     .padding(.top, 80)
                 Spacer()
-                NavigationLink(destination: trackerView()) {
+                NavigationLink(destination: TrackerView()) {
                 label: do {
                     Text("Start")
                         .frame(maxWidth: 250, maxHeight: 60)
