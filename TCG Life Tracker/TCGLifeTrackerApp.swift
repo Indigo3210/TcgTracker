@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct practiceApp: App {
+struct LifeTrackerApp: App {
     var body: some Scene {
         WindowGroup {
             menuView()

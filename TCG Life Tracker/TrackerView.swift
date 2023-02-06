@@ -5,55 +5,21 @@
 //  Created by Jonathan Vale on 1/21/23.
 //
 // To do:
-// verify if its best to do the 3 mid section icons individual and not in a loop
-// add selector function to pallete
-// add color palletes for each mana type (5)
-// add reset fuction to middle button
-// add setting pop up menu
-// add selector
+// add an expand feature ot the color picker
+// add custom colors for each mana color
+//assing custom icons to colorPalette
 // add animation to the mid section to hide it and bring it up as needed
 import Foundation
 import SwiftUI
 
 struct TrackerView: View {
     
+    @State private var selectedColorPlayer1: Color = .red
+    @State private var selectedColorPlayer2: Color = .blue
     @State private var lifeTotalPlayer1 = 20
     @State private var lifeTotalPlayer2 = 20
+    @State var isExpandeble = false
     
-    let columns = [GridItem(.flexible()), GridItem(.flexible()),GridItem(.flexible())]
-    
-    struct Icon: Hashable {
-        static func == (lhs: TrackerView.Icon, rhs: TrackerView.Icon) -> Bool {
-            lhs.name == rhs.name
-        }
-        
-        let name: String
-       // let action: () -> Void
-    }
-   
-   // let gearIcon = Icon(name: "gear", action: <#T##() -> Void#>)
-    let gobackwardIcon: Icon
-        //    lifeTotalPla})
-    //let paletteIcon = Icon(name: "palette", action: <#T##() -> Void#>)
-     
-    init() {
-        gobackwardIcon = Icon(name: "gobackward")//, action: { handleButton() })
-        midSectionIcons = [gobackwardIcon]
-        
-    }
-    func handleButton(name: String) {
-        switch name {
-        case "gobackward":
-            lifeTotalPlayer1 = 20
-            lifeTotalPlayer2 = 20
-        default:
-            return
-        }
-       
-         }
-    
-
-    let midSectionIcons: [Icon]
     
     var body: some View {
         NavigationStack {
@@ -69,25 +35,37 @@ struct TrackerView: View {
                         lifeTotalPlayer1 -= 1
                         
                     }
+                    
+                    HStack {
+                        MyColorPicker(selectedColor: $selectedColorPlayer1)
+                    }
+                    
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(.mint)
+                .foregroundColor(selectedColorPlayer1 == .black ? .white : .primary)
                 .rotationEffect(Angle(degrees: 180))
-                .ignoresSafeArea()
                 .font(.system(size: 75))
+                .background(selectedColorPlayer1)
+
                 
-                LazyVGrid(columns: columns) {
-                    ForEach(midSectionIcons, id: \.self) { icon in
-                        Button(action:  {handleButton(name: icon.name )}) {
-                            Image(systemName: icon.name)
-                        }
-                        
+                HStack {
+                    
+                    Button {
+                        lifeTotalPlayer1 = 20
+                        lifeTotalPlayer2 = 20
+                    }label: {
+                        Image(systemName: "gobackward")
                     }
+                    
                 }
-                .background(.yellow)
+                .frame(maxWidth: .infinity)
+                .background(.thickMaterial)
+                .font(.system(size: 30))
+                
+                
                 
                 VStack(spacing: 0) {
-                    Spacer()
+                    
                     Button("+") {
                         lifeTotalPlayer2 += 1
                     }
@@ -100,15 +78,20 @@ struct TrackerView: View {
                     Button("-") {
                         lifeTotalPlayer2 -= 1
                     }
-                    Spacer()
+                    
+                    HStack {
+                        MyColorPicker(selectedColor: $selectedColorPlayer2)
+                    }
+                    
+                    
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(.cyan)
-                .ignoresSafeArea()
+                .foregroundColor(selectedColorPlayer2 == .black ? .white : .primary)
+                .background(selectedColorPlayer2)
                 .font(.system(size: 75))
+                
             }
         }
-        .foregroundColor(.primary)
     }
 }
 
