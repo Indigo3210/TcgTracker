@@ -18,32 +18,32 @@ struct MyColorPicker: View {
     
     var body: some View {
         
-            HStack {
+            VStack {
+                
                 ForEach(colors, id: \.self) { color in
                     Circle()
                         .foregroundColor(color)
+                        .shadow(radius: 2)
                         .frame(width: 45, height: 45)
                         .opacity(color == selectedColor ? 0.5 : 1.0)
                         .scaleEffect(color == selectedColor ? 1.1 : 1.0)
                         .onTapGesture {
                             selectedColor = color
-                           // withAnimation(.easeInOut(duration: 0.5)) {
-                             //   isExpanded.toggle()
-                            //}
+                            }
                         }
                 }
+                .frame(width: 40, height: 250 )
+                .padding()
+                .background(.thinMaterial)
+                .cornerRadius(20)
+                .padding(.horizontal)
             }
-           // .transition(.move(edge: .top))
-            //.frame(width: isExpanded ? 10 : CGFloat(colors.count) * 80 + 10, height: 50)
-            .padding()
-            .background(.thinMaterial)
-            .cornerRadius(20)
-            .padding(.horizontal)
+     
 
        
       
     }
-}
+
 
        
 

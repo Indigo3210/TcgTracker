@@ -7,7 +7,7 @@
 // To do:
 // add an expand feature ot the color picker
 // add custom colors for each mana color
-//assing custom icons to colorPalette
+// assing custom icons to colorPalette
 // add animation to the mid section to hide it and bring it up as needed
 import Foundation
 import SwiftUI
@@ -18,27 +18,37 @@ struct TrackerView: View {
     @State private var selectedColorPlayer2: Color = .blue
     @State private var lifeTotalPlayer1 = 20
     @State private var lifeTotalPlayer2 = 20
-    @State var isExpandeble = false
+    
+    @State private var playerOnePalette = false
+    @State private var playerTwoPalette = false
+
     
     
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
                 VStack(spacing:0) {
-                    Button("+") {
-                        lifeTotalPlayer1 += 1
+                    HStack(spacing: 100) {
+                        if playerOnePalette {
+                            MyColorPicker(selectedColor: $selectedColorPlayer1)
+                                .transition(.scale)
+                        }
+                        VStack {
+                            Button("+") {
+                                lifeTotalPlayer1 += 1
+                            }
+                            
+                            Text("\(lifeTotalPlayer1)")
+                            
+                            Button("-") {
+                                lifeTotalPlayer1 -= 1
+                                
+                            }
+                            .frame(width: 100,height: 100)
+                            .background(selectedColorPlayer1)
+                        }
                     }
-                    
-                    Text("\(lifeTotalPlayer1)")
-                    
-                    Button("-") {
-                        lifeTotalPlayer1 -= 1
-                        
-                    }
-                    
-                    HStack {
-                        MyColorPicker(selectedColor: $selectedColorPlayer1)
-                    }
+                  
                     
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -49,12 +59,34 @@ struct TrackerView: View {
 
                 
                 HStack {
+                    Button {
+                        withAnimation {
+                            playerOnePalette.toggle()
+                        }
+                    }label: {
+                        Image(systemName: "paintpalette.fill")
+                            .foregroundColor(selectedColorPlayer1)
+                            .rotationEffect(Angle(degrees: 180))
+                            
+                    }
                     
                     Button {
-                        lifeTotalPlayer1 = 20
-                        lifeTotalPlayer2 = 20
+                        withAnimation {
+                            lifeTotalPlayer1 = 20
+                            lifeTotalPlayer2 = 20
+                        }
                     }label: {
                         Image(systemName: "gobackward")
+                            .foregroundColor(.black)
+                    }
+                    
+                    Button {
+                        withAnimation {
+                            playerTwoPalette.toggle()
+                        }
+                    }label: {
+                        Image(systemName: "paintpalette.fill")
+                            .foregroundColor(selectedColorPlayer2)
                     }
                     
                 }
@@ -65,25 +97,35 @@ struct TrackerView: View {
                 
                 
                 VStack(spacing: 0) {
-                    
-                    Button("+") {
-                        lifeTotalPlayer2 += 1
+                    HStack(spacing: 100) {
+                        if playerTwoPalette {
+                            MyColorPicker(selectedColor: $selectedColorPlayer2)
+                                .transition(.scale)
+                        }
+                            
+                        VStack {
+                            Button("+") {
+                                lifeTotalPlayer2 += 1
+                            }
+                            
+                            Spacer()
+                            Text("\(lifeTotalPlayer2)")
+                            Spacer()
+                            
+                            
+                            Button("-") {
+                                lifeTotalPlayer2 -= 1
+                                
+                            }
+                            .frame(width: 100,height: 100)
+                            .background(selectedColorPlayer2)
+                        }
+                        
                     }
-                    
-                    Spacer()
-                    Text("\(lifeTotalPlayer2)")
-                    Spacer()
+                    .padding(.trailing, 0.0)
                     
                     
-                    Button("-") {
-                        lifeTotalPlayer2 -= 1
-                    }
-                    
-                    HStack {
-                        MyColorPicker(selectedColor: $selectedColorPlayer2)
-                    }
-                    
-                    
+
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .foregroundColor(selectedColorPlayer2 == .black ? .white : .primary)
