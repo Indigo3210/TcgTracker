@@ -5,9 +5,12 @@
 //  Created by Jonathan Vale on 1/21/23.
 //
 // To do:
-// add an expand feature ot the color picker
 // add custom colors for each mana color
-// assing custom icons to colorPalette
+// add a 40 life option for comander games
+// add a split screen option for 3 and 4 players
+// add a sub counter for posion damage
+// add a sub counter for comander damage
+// add a sub counter for mana
 // add animation to the mid section to hide it and bring it up as needed
 import Foundation
 import SwiftUI
@@ -19,21 +22,32 @@ struct TrackerView: View {
     @State private var lifeTotalPlayer1 = 20
     @State private var lifeTotalPlayer2 = 20
     
+    // command + option + / for documentation
+    
+    /// this something
     @State private var playerOnePalette = false
     @State private var playerTwoPalette = false
-
+    @State private var numberOfPlayersSelector = false
     
+    @State private var numberOfPlayers = false
+    @State private var selectedNumberOfPlayers = "2"
+    
+    // remove extra lines
     
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
                 VStack(spacing:0) {
+                    
                     HStack(spacing: 100) {
                         if playerOnePalette {
-                            MyColorPicker(selectedColor: $selectedColorPlayer1)
+                            ColorPicker(selectedColor: $selectedColorPlayer1)
                                 .transition(.scale)
                         }
+                        
+                        
                         VStack {
+                            
                             Button("+") {
                                 lifeTotalPlayer1 += 1
                             }
@@ -47,8 +61,9 @@ struct TrackerView: View {
                             .frame(width: 100,height: 100)
                             .background(selectedColorPlayer1)
                         }
+                        
                     }
-                  
+                    
                     
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -56,7 +71,7 @@ struct TrackerView: View {
                 .rotationEffect(Angle(degrees: 180))
                 .font(.system(size: 75))
                 .background(selectedColorPlayer1)
-
+                
                 
                 HStack {
                     Button {
@@ -67,7 +82,25 @@ struct TrackerView: View {
                         Image(systemName: "paintpalette.fill")
                             .foregroundColor(selectedColorPlayer1)
                             .rotationEffect(Angle(degrees: 180))
-                            
+                        
+                    }
+                    
+                    
+                    
+                    Button {
+                        withAnimation {
+                            numberOfPlayersSelector.toggle()
+                        }
+                    }label: {
+                        Image(systemName: "person.2.fill")
+                            .foregroundColor(.black)
+                        
+                        
+                    }
+                    
+                    if numberOfPlayersSelector {
+                        ActivePlayersSelector(selectedNumberOfPlayer: $selectedNumberOfPlayers)
+                            .transition(.scale)
                     }
                     
                     Button {
@@ -99,10 +132,10 @@ struct TrackerView: View {
                 VStack(spacing: 0) {
                     HStack(spacing: 100) {
                         if playerTwoPalette {
-                            MyColorPicker(selectedColor: $selectedColorPlayer2)
+                            ColorPicker(selectedColor: $selectedColorPlayer2)
                                 .transition(.scale)
                         }
-                            
+                        
                         VStack {
                             Button("+") {
                                 lifeTotalPlayer2 += 1
@@ -125,7 +158,7 @@ struct TrackerView: View {
                     .padding(.trailing, 0.0)
                     
                     
-
+                    
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .foregroundColor(selectedColorPlayer2 == .black ? .white : .primary)

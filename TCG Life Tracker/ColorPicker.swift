@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct MyColorPicker: View {
-    @State var isExpanded = false
+struct ColorPicker: View {
+    
     @Binding var selectedColor: Color
     private let colors:[Color] = [.red, .blue, .green, .black, .white]
     
@@ -38,19 +38,16 @@ struct MyColorPicker: View {
                 .cornerRadius(20)
                 .padding(.horizontal)
             }
-     
 
-       
-      
     }
 
 
        
 
 
-struct MyColorPicker_Previews: PreviewProvider {
+struct ColorPicker_Previews: PreviewProvider {
     
     static var previews: some View {
-        MyColorPicker(selectedColor: .constant(.blue))
+        ColorPicker(selectedColor: .constant(.blue))
     }
 }
