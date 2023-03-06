@@ -11,7 +11,7 @@ import SwiftUI
 struct LifeTrackerApp: App {
     var body: some Scene {
         WindowGroup {
-            menuView() // structs should be Capitalized MenuView
+            MenuView() // structs should be Capitalized MenuView
         }
     }
 }

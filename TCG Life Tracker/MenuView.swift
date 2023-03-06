@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct menuView: View {
+struct MenuView: View {
     var options = ["TCG Selector", "Settings"]
     
     var body: some View {
@@ -56,8 +56,8 @@ struct menuView: View {
 }
 
 
-struct menuView_Previews: PreviewProvider {
+struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
-        menuView()
+        MenuView()
     }
 }

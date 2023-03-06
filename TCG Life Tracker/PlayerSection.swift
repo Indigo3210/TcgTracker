@@ -8,35 +8,27 @@
 import SwiftUI
 
 struct PlayerSection: View {
-    @State var screenType: Screens = .one
-    let num = 1
+    
+    @State var screenType: Screens = .three
+    
+    
     var body: some View {
         VStack {
-            switch screenType {
-            case .one:
-                Screens.one.body
-            case .two:
-                Screens.three.body
-            case .three, .four:
-                Screens.one.body
-                // screenType = .three
-
-            }
+            screenType.body
         }
     }
 }
 
 
 enum Screens: View {
-    case one
+    
     case two
     case three
     case four
     
     var body: some View {
         switch self {
-        case .one:
-            return AnyView(TrackerView())
+            
         case .two:
             return AnyView(TrackerView())
         case .three:

@@ -13,9 +13,6 @@ struct ColorPicker: View {
     @Binding var selectedColor: Color
     private let colors:[Color] = [.red, .blue, .green, .black, .white]
     
-    
-    
-    
     var body: some View {
         
             VStack {
@@ -40,10 +37,6 @@ struct ColorPicker: View {
             }
 
     }
-
-
-       
-
 
 struct ColorPicker_Previews: PreviewProvider {
     
