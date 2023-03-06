@@ -5,8 +5,8 @@
 //  Created by Jonathan Vale on 1/21/23.
 //
 // To do:
+// add funcions to middle section buttons for player3 and player4
 // add custom colors for each mana color
-// add a 40 life option for comander games
 // add a split screen option for 3 and 4 players
 // add a sub counter for posion damage
 // add a sub counter for comander damage
@@ -46,21 +46,7 @@ struct TrackerView: View {
                         }
                         
                         
-                        VStack {
-                            
-                            Button("+") {
-                                lifeTotalPlayer1 += 1
-                            }
-                            
-                            Text("\(lifeTotalPlayer1)")
-                            
-                            Button("-") {
-                                lifeTotalPlayer1 -= 1
-                                
-                            }
-                            .frame(width: 100,height: 100)
-                            .background(selectedColorPlayer1)
-                        }
+                       LifeCounter()
                         
                     }
                     

@@ -16,6 +16,8 @@
 		FC2C802729B140EA007D9A9B /* PlayerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C802629B140EA007D9A9B /* PlayerSection.swift */; };
 		FC2C802929B57D22007D9A9B /* ActivePlayersSelector2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C802829B57D22007D9A9B /* ActivePlayersSelector2.swift */; };
 		FC2C802B29B59349007D9A9B /* MiddleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C802A29B59349007D9A9B /* MiddleSection.swift */; };
+		FC2C802D29B5B6EC007D9A9B /* LifeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C802C29B5B6EC007D9A9B /* LifeCounter.swift */; };
+		FC2C803029B5BA9C007D9A9B /* Main View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C802F29B5BA9C007D9A9B /* Main View.swift */; };
 		FC61E327297CE9E800E85B0C /* TrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC61E326297CE9E800E85B0C /* TrackerView.swift */; };
 		FC61E32F298C53E000E85B0C /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC61E32E298C53E000E85B0C /* ColorPicker.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +33,8 @@
 		FC2C802629B140EA007D9A9B /* PlayerSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSection.swift; sourceTree = "<group>"; };
 		FC2C802829B57D22007D9A9B /* ActivePlayersSelector2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivePlayersSelector2.swift; sourceTree = "<group>"; };
 		FC2C802A29B59349007D9A9B /* MiddleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleSection.swift; sourceTree = "<group>"; };
+		FC2C802C29B5B6EC007D9A9B /* LifeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCounter.swift; sourceTree = "<group>"; };
+		FC2C802F29B5BA9C007D9A9B /* Main View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main View.swift"; sourceTree = "<group>"; };
 		FC61E326297CE9E800E85B0C /* TrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerView.swift; sourceTree = "<group>"; };
 		FC61E32E298C53E000E85B0C /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,14 +71,12 @@
 			children = (
 				FC136D13296D16EA00C7342C /* TCGLifeTrackerApp.swift */,
 				FC136D15296D16EA00C7342C /* MenuView.swift */,
-				FC61E326297CE9E800E85B0C /* TrackerView.swift */,
-				FC2C802A29B59349007D9A9B /* MiddleSection.swift */,
-				FC61E32E298C53E000E85B0C /* ColorPicker.swift */,
-				FC2C802229AF9A65007D9A9B /* ActivePlayersSelector.swift */,
+				FC2C802F29B5BA9C007D9A9B /* Main View.swift */,
 				FC2C802629B140EA007D9A9B /* PlayerSection.swift */,
-				FC2C802829B57D22007D9A9B /* ActivePlayersSelector2.swift */,
+				FC61E326297CE9E800E85B0C /* TrackerView.swift */,
 				FC2C802429B139E8007D9A9B /* ThreePlayerTrackerView.swift */,
 				FC136D17296D16EC00C7342C /* Assets.xcassets */,
+				FC2C802E29B5B8DA007D9A9B /* Sections and Buttons */,
 				FC136D19296D16EC00C7342C /* Preview Content */,
 			);
 			path = "TCG Life Tracker";
@@ -86,6 +88,18 @@
 				FC136D1A296D16EC00C7342C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FC2C802E29B5B8DA007D9A9B /* Sections and Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				FC2C802A29B59349007D9A9B /* MiddleSection.swift */,
+				FC61E32E298C53E000E85B0C /* ColorPicker.swift */,
+				FC2C802229AF9A65007D9A9B /* ActivePlayersSelector.swift */,
+				FC2C802829B57D22007D9A9B /* ActivePlayersSelector2.swift */,
+				FC2C802C29B5B6EC007D9A9B /* LifeCounter.swift */,
+			);
+			path = "Sections and Buttons";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,9 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2C802D29B5B6EC007D9A9B /* LifeCounter.swift in Sources */,
 				FC2C802329AF9A65007D9A9B /* ActivePlayersSelector.swift in Sources */,
 				FC61E32F298C53E000E85B0C /* ColorPicker.swift in Sources */,
 				FC61E327297CE9E800E85B0C /* TrackerView.swift in Sources */,
+				FC2C803029B5BA9C007D9A9B /* Main View.swift in Sources */,
 				FC136D16296D16EA00C7342C /* MenuView.swift in Sources */,
 				FC2C802729B140EA007D9A9B /* PlayerSection.swift in Sources */,
 				FC2C802529B139E8007D9A9B /* ThreePlayerTrackerView.swift in Sources */,
