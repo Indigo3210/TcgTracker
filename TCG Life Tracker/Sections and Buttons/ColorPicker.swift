@@ -29,11 +29,9 @@ struct ColorPicker: View {
                             }
                         }
                 }
-                .frame(width: 40, height: 250 )
                 .padding()
                 .background(.thinMaterial)
                 .cornerRadius(20)
-                .padding(.horizontal)
             }
 
     }

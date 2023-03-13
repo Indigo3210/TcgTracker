@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0A12E929BD6DC500491499 /* ColorPicker2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0A12E829BD6DC500491499 /* ColorPicker2.swift */; };
 		FC136D14296D16EA00C7342C /* TCGLifeTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC136D13296D16EA00C7342C /* TCGLifeTrackerApp.swift */; };
 		FC136D16296D16EA00C7342C /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC136D15296D16EA00C7342C /* MenuView.swift */; };
 		FC136D18296D16EC00C7342C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC136D17296D16EC00C7342C /* Assets.xcassets */; };
@@ -16,13 +17,20 @@
 		FC2C802729B140EA007D9A9B /* PlayerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C802629B140EA007D9A9B /* PlayerSection.swift */; };
 		FC2C802929B57D22007D9A9B /* ActivePlayersSelector2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C802829B57D22007D9A9B /* ActivePlayersSelector2.swift */; };
 		FC2C802B29B59349007D9A9B /* MiddleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C802A29B59349007D9A9B /* MiddleSection.swift */; };
-		FC2C802D29B5B6EC007D9A9B /* LifeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C802C29B5B6EC007D9A9B /* LifeCounter.swift */; };
+		FC2C802D29B5B6EC007D9A9B /* LifeCounterPlayer1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C802C29B5B6EC007D9A9B /* LifeCounterPlayer1.swift */; };
 		FC2C803029B5BA9C007D9A9B /* Main View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C802F29B5BA9C007D9A9B /* Main View.swift */; };
-		FC61E327297CE9E800E85B0C /* TrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC61E326297CE9E800E85B0C /* TrackerView.swift */; };
+		FC2C803229B776C7007D9A9B /* LifeCounterPlayer2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C803129B776C7007D9A9B /* LifeCounterPlayer2.swift */; };
+		FC2C803429B77B11007D9A9B /* LifeCounterPlayer3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C803329B77B11007D9A9B /* LifeCounterPlayer3.swift */; };
+		FC2C803629B77B98007D9A9B /* LifeCounterPlayer4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C803529B77B98007D9A9B /* LifeCounterPlayer4.swift */; };
+		FC2C803829B95E6C007D9A9B /* ThreePlayerMiddleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C803729B95E6C007D9A9B /* ThreePlayerMiddleSection.swift */; };
+		FC2C803A29BBBD2C007D9A9B /* FourPlayerTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C803929BBBD2C007D9A9B /* FourPlayerTrackerView.swift */; };
+		FC2C803C29BCE0BE007D9A9B /* FourPlayerMiddleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C803B29BCE0BE007D9A9B /* FourPlayerMiddleSection.swift */; };
+		FC61E327297CE9E800E85B0C /* TwoPlayerTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC61E326297CE9E800E85B0C /* TwoPlayerTrackerView.swift */; };
 		FC61E32F298C53E000E85B0C /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC61E32E298C53E000E85B0C /* ColorPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC0A12E829BD6DC500491499 /* ColorPicker2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker2.swift; sourceTree = "<group>"; };
 		FC136D10296D16EA00C7342C /* TCG Life Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCG Life Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC136D13296D16EA00C7342C /* TCGLifeTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCGLifeTrackerApp.swift; sourceTree = "<group>"; };
 		FC136D15296D16EA00C7342C /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -33,9 +41,15 @@
 		FC2C802629B140EA007D9A9B /* PlayerSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSection.swift; sourceTree = "<group>"; };
 		FC2C802829B57D22007D9A9B /* ActivePlayersSelector2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivePlayersSelector2.swift; sourceTree = "<group>"; };
 		FC2C802A29B59349007D9A9B /* MiddleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleSection.swift; sourceTree = "<group>"; };
-		FC2C802C29B5B6EC007D9A9B /* LifeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCounter.swift; sourceTree = "<group>"; };
+		FC2C802C29B5B6EC007D9A9B /* LifeCounterPlayer1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCounterPlayer1.swift; sourceTree = "<group>"; };
 		FC2C802F29B5BA9C007D9A9B /* Main View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Main View.swift"; sourceTree = "<group>"; };
-		FC61E326297CE9E800E85B0C /* TrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerView.swift; sourceTree = "<group>"; };
+		FC2C803129B776C7007D9A9B /* LifeCounterPlayer2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCounterPlayer2.swift; sourceTree = "<group>"; };
+		FC2C803329B77B11007D9A9B /* LifeCounterPlayer3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCounterPlayer3.swift; sourceTree = "<group>"; };
+		FC2C803529B77B98007D9A9B /* LifeCounterPlayer4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCounterPlayer4.swift; sourceTree = "<group>"; };
+		FC2C803729B95E6C007D9A9B /* ThreePlayerMiddleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreePlayerMiddleSection.swift; sourceTree = "<group>"; };
+		FC2C803929BBBD2C007D9A9B /* FourPlayerTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourPlayerTrackerView.swift; sourceTree = "<group>"; };
+		FC2C803B29BCE0BE007D9A9B /* FourPlayerMiddleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourPlayerMiddleSection.swift; sourceTree = "<group>"; };
+		FC61E326297CE9E800E85B0C /* TwoPlayerTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPlayerTrackerView.swift; sourceTree = "<group>"; };
 		FC61E32E298C53E000E85B0C /* ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,8 +87,9 @@
 				FC136D15296D16EA00C7342C /* MenuView.swift */,
 				FC2C802F29B5BA9C007D9A9B /* Main View.swift */,
 				FC2C802629B140EA007D9A9B /* PlayerSection.swift */,
-				FC61E326297CE9E800E85B0C /* TrackerView.swift */,
+				FC61E326297CE9E800E85B0C /* TwoPlayerTrackerView.swift */,
 				FC2C802429B139E8007D9A9B /* ThreePlayerTrackerView.swift */,
+				FC2C803929BBBD2C007D9A9B /* FourPlayerTrackerView.swift */,
 				FC136D17296D16EC00C7342C /* Assets.xcassets */,
 				FC2C802E29B5B8DA007D9A9B /* Sections and Buttons */,
 				FC136D19296D16EC00C7342C /* Preview Content */,
@@ -94,10 +109,16 @@
 			isa = PBXGroup;
 			children = (
 				FC2C802A29B59349007D9A9B /* MiddleSection.swift */,
+				FC2C803729B95E6C007D9A9B /* ThreePlayerMiddleSection.swift */,
+				FC2C803B29BCE0BE007D9A9B /* FourPlayerMiddleSection.swift */,
 				FC61E32E298C53E000E85B0C /* ColorPicker.swift */,
+				FC0A12E829BD6DC500491499 /* ColorPicker2.swift */,
 				FC2C802229AF9A65007D9A9B /* ActivePlayersSelector.swift */,
 				FC2C802829B57D22007D9A9B /* ActivePlayersSelector2.swift */,
-				FC2C802C29B5B6EC007D9A9B /* LifeCounter.swift */,
+				FC2C802C29B5B6EC007D9A9B /* LifeCounterPlayer1.swift */,
+				FC2C803129B776C7007D9A9B /* LifeCounterPlayer2.swift */,
+				FC2C803329B77B11007D9A9B /* LifeCounterPlayer3.swift */,
+				FC2C803529B77B98007D9A9B /* LifeCounterPlayer4.swift */,
 			);
 			path = "Sections and Buttons";
 			sourceTree = "<group>";
@@ -172,12 +193,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC2C802D29B5B6EC007D9A9B /* LifeCounter.swift in Sources */,
+				FC2C802D29B5B6EC007D9A9B /* LifeCounterPlayer1.swift in Sources */,
 				FC2C802329AF9A65007D9A9B /* ActivePlayersSelector.swift in Sources */,
+				FC2C803629B77B98007D9A9B /* LifeCounterPlayer4.swift in Sources */,
+				FC2C803429B77B11007D9A9B /* LifeCounterPlayer3.swift in Sources */,
 				FC61E32F298C53E000E85B0C /* ColorPicker.swift in Sources */,
-				FC61E327297CE9E800E85B0C /* TrackerView.swift in Sources */,
+				FC61E327297CE9E800E85B0C /* TwoPlayerTrackerView.swift in Sources */,
+				FC2C803A29BBBD2C007D9A9B /* FourPlayerTrackerView.swift in Sources */,
 				FC2C803029B5BA9C007D9A9B /* Main View.swift in Sources */,
+				FC0A12E929BD6DC500491499 /* ColorPicker2.swift in Sources */,
 				FC136D16296D16EA00C7342C /* MenuView.swift in Sources */,
+				FC2C803229B776C7007D9A9B /* LifeCounterPlayer2.swift in Sources */,
+				FC2C803C29BCE0BE007D9A9B /* FourPlayerMiddleSection.swift in Sources */,
+				FC2C803829B95E6C007D9A9B /* ThreePlayerMiddleSection.swift in Sources */,
 				FC2C802729B140EA007D9A9B /* PlayerSection.swift in Sources */,
 				FC2C802529B139E8007D9A9B /* ThreePlayerTrackerView.swift in Sources */,
 				FC2C802929B57D22007D9A9B /* ActivePlayersSelector2.swift in Sources */,

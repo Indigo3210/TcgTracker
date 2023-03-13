@@ -22,12 +22,13 @@ struct MenuView: View {
                     .cornerRadius(50)
                     .padding(.horizontal, 8)
                     .foregroundColor(.yellow)
-                    .padding(.top, 80)
+                    .padding(.top, 70)
                 Spacer()
-                NavigationLink(destination: TrackerView()) {
+                NavigationLink(destination: TwoPlayerTrackerView()) {
                 label: do {
                     Text("Start")
-                        .frame(maxWidth: 250, maxHeight: 60)
+                        .frame(maxWidth: .infinity)
+                        .padding()
                         .font(.system(size: 35))
                         .foregroundColor(.yellow)
                         .background(.purple)
@@ -39,7 +40,8 @@ struct MenuView: View {
                 ForEach(0..<2) {number in
                     Button(options[number]) {
                     }
-                    .frame(maxWidth: 250, maxHeight: 60)
+                    .frame(maxWidth: .infinity)
+                    .padding()
                     .font(.system(size: 35))
                     .foregroundColor(.yellow)
                     .background(.purple)

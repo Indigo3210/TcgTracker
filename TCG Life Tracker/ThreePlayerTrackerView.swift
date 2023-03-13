@@ -25,170 +25,58 @@ struct ThreePlayerTrackerView: View {
     @State private var selectedNumberOfPlayers = "2"
     
     var body: some View {
-        VStack(spacing: 0) {
-            VStack(spacing:0) {
-                HStack(spacing:0) {
-                    VStack(spacing: 0) {
-                        Button("+") {
-                            lifeTotalPlayer1 += 1
+        NavigationStack {
+            VStack(spacing: 0) {
+                HStack(spacing: 0) {
+                    HStack(spacing:0) {
+                        if playerOnePalette {
+                            ColorPicker(selectedColor: $selectedColorPlayer1)
+                                .transition(.scale)
                         }
                         
-                        Text("\(lifeTotalPlayer1)")
+                        LifeCounterPlayer1(lifeTotalPlayer1: $lifeTotalPlayer1, selectedColorPlayer1: $selectedColorPlayer1)
                         
-                        Button("-") {
-                            lifeTotalPlayer1 -= 1
-                            
+                    }
+                    HStack {
+                        
+                        LifeCounterPlayer2(lifeTotalPlayer2: $lifeTotalPlayer2, selectedColorPlayer2: $selectedColorPlayer2)
+                            .frame(maxWidth: .infinity)
+                            .background(selectedColorPlayer2)
+                        
+                        if playerTwoPalette {
+                            ColorPicker(selectedColor: $selectedColorPlayer2)
+                                .transition(.scale)
                         }
                     }
-                    .frame(width: 200, height: 420)
-                    .background(selectedColorPlayer1)
-                    
-                    if playerOnePalette {
-                        ColorPicker(selectedColor: $selectedColorPlayer1)
-                            .transition(.scale)
-                    }
+                }
+                .background(.ultraThinMaterial)
+                .rotationEffect(Angle(degrees: 180))
+                .font(.system(size: 75))
+                
+                ThreePlayerMiddleSection(lifeTotalPlayer1: $lifeTotalPlayer1, lifeTotalPlayer2: $lifeTotalPlayer2, lifeTotalPlayer3: $lifeTotalPlayer3, playerOnePalette: $playerOnePalette, playerTwoPalette: $playerTwoPalette, playerThreePalette: $playerThreePalette, selectedColorPlayer1: $selectedColorPlayer1, selectedColorPlayer2: $selectedColorPlayer2, selectedColorPlayer3: $selectedColorPlayer3, numberOfPlayersSelector: $numberOfPlayersSelector)
+                    .frame(maxWidth: .infinity)
+                    .background(.thickMaterial)
+                    .font(.system(size: 35))
+                
+                HStack(spacing: 15) {
                     
                     if playerThreePalette {
                         ColorPicker(selectedColor: $selectedColorPlayer3)
                             .transition(.scale)
                     }
                     
-                    VStack(spacing: 0) {
-                        Button("+") {
-                            lifeTotalPlayer3 += 1
-                        }
-                        
-                        Text("\(lifeTotalPlayer3)")
-                        
-                        Button("-") {
-                            lifeTotalPlayer3 -= 1
-                            
-                        }
-                    }
-                    .frame(width: 200, height: 420)
-                    .background(selectedColorPlayer3)
+                    LifeCounterPlayer3(lifeTotalPlayer3: $lifeTotalPlayer3, selectedColorPlayer3: $selectedColorPlayer3)
+                        .font(.system(size: 75))
+                        .foregroundColor(selectedColorPlayer3 == .black ? .white : .primary)
+                        .background(selectedColorPlayer3)
+                    
                     
                 }
-                
             }
-            .background(.white)
-            .frame(width: 400, height: .infinity)
-            .foregroundColor(selectedColorPlayer1 == .black ? .white : .primary)
-            .foregroundColor(selectedColorPlayer3 == .black ? .white : .primary)
-            .rotationEffect(Angle(degrees: 180))
-            .font(.system(size: 75))
-            
-            
-            
-            HStack {
-                
-                Button {
-                    withAnimation {
-                        playerOnePalette.toggle()
-                    }
-                }label: {
-                    Image(systemName: "paintpalette.fill")
-                        .foregroundColor(selectedColorPlayer1)
-                        .rotationEffect(Angle(degrees: 180))
-                    
-                }
-                
-                Button {
-                    withAnimation {
-                        playerThreePalette.toggle()
-                    }
-                }label: {
-                    Image(systemName: "paintpalette.fill")
-                        .foregroundColor(selectedColorPlayer3)
-                        .rotationEffect(Angle(degrees: 180))
-                    
-                }
-                
-              
-                
-                Button {
-                    withAnimation {
-                        numberOfPlayersSelector.toggle()
-                    }
-                }label: {
-                    Image(systemName: "person.2.fill")
-                        .foregroundColor(.black)
-                        
-                    
-                }
-                
-                if numberOfPlayersSelector {
-                    ActivePlayersSelector(selectedNumberOfPlayer: $selectedNumberOfPlayers)
-                        .transition(.scale)
-                }
-                
-                Button {
-                    withAnimation {
-                        lifeTotalPlayer1 = 20
-                        lifeTotalPlayer2 = 20
-                    }
-                }label: {
-                    Image(systemName: "gobackward")
-                        .foregroundColor(.black)
-                }
-                
-                Button {
-                    withAnimation {
-                        playerTwoPalette.toggle()
-                    }
-                }label: {
-                    Image(systemName: "paintpalette.fill")
-                        .foregroundColor(selectedColorPlayer2)
-                }
-                
-            }
-            .frame(maxWidth: .infinity)
-            .background(.thickMaterial)
-            .font(.system(size: 30))
-            
-            
-            
-            VStack(spacing: 0) {
-                HStack(spacing: 0) {
-                    if playerTwoPalette {
-                        ColorPicker(selectedColor: $selectedColorPlayer2)
-                            .transition(.scale)
-                    }
-                    
-                    VStack {
-                        Button("+") {
-                            lifeTotalPlayer2 += 1
-                        }
-                        
-                        Spacer()
-                        Text("\(lifeTotalPlayer2)")
-                        Spacer()
-                        
-                        
-                        Button("-") {
-                            lifeTotalPlayer2 -= 1
-                            
-                        }
-                        .frame(width: 100,height: 100)
-                        .background(selectedColorPlayer2)
-                    }
-                    
-                }
-                                
-                
-                
-            }
-            .frame( width: 400, height: .infinity)
-            .foregroundColor(selectedColorPlayer2 == .black ? .white : .primary)
-            .background(selectedColorPlayer2)
-            .font(.system(size: 75))
-            
+            .ignoresSafeArea()
         }
-        .frame(width: 400, height: .infinity)
-        .ignoresSafeArea()
-
-    }
         
+    }
 }
 
 

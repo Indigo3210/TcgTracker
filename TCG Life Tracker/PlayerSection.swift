@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PlayerSection: View {
     
-    @State var screenType: Screens = .three
+    @State var screenType: Screens = .two
     
     
     var body: some View {
@@ -21,20 +21,20 @@ struct PlayerSection: View {
 
 
 enum Screens: View {
-    
+
     case two
     case three
     case four
-    
     var body: some View {
+        
         switch self {
             
         case .two:
-            return AnyView(TrackerView())
+            return AnyView(TwoPlayerTrackerView())
         case .three:
             return AnyView(ThreePlayerTrackerView())
         case .four:
-            return AnyView(TrackerView())
+            return AnyView(TwoPlayerTrackerView())
         }
     }
     
